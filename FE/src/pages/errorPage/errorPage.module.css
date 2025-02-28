@@ -1,0 +1,35 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 5rem;
+    padding-left: 0.875rem;
+    padding-right: 0.875rem;
+}
+
+.image {
+    width: fit-content;
+}
+
+.content {
+    max-width: 475px;
+    color: #6B6B6B;
+}
+
+.title {
+    font-size: 36px;
+    font-weight: 700;
+}
+
+@media (min-width: 768px) {
+    .container {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 3rem;
+  }
+
+  .image {
+    height: fit-content;
+
+  }
+}
