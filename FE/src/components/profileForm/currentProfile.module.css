@@ -1,0 +1,216 @@
+.userProfile {
+    display: flex;
+    padding: 30px 0 0 13vh;
+    gap: 45px;
+  }
+  .button{
+    font-size: 14px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px; /* Отступ между иконкой и текстом */
+    line-height: 18px;
+    transition: background-color 0.3s ease;
+    
+  }
+  .avatarWrapper {
+    position: relative;
+    min-width: 168px;
+    height: 168px;
+    border-radius: 50%;
+  }
+  
+  .avatarWrapper::before {
+    content: '';
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    right: -3px;
+    bottom: -3px;
+    border-radius: 50%;
+    background: linear-gradient(225deg, #ff00aa, #ff007f, #ff5500, #ffaa00, #ffd000);
+    z-index: 1;
+  }
+  
+  .avatarInner {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    padding: 4px;
+    background-color: #f0f0f0;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+  
+  .avatarInner img {
+    width: 164px;
+    height: 164px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+   
+  }
+  
+  .userDetails {
+    display: flex;
+    flex-direction: column;
+    width: 435px;
+  }
+  
+  .actionButtons {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .actionButtons p {
+    font-size: 19.84px;
+    font-weight: 400;
+    line-height: 25px;
+  }
+  
+  .stats {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+    font-size: 16px;
+    line-height: 18px;
+  }
+  
+  .statsCount {
+    font-weight: 600;
+  }
+  
+  .bio {
+    width: 97%;
+    line-height: 18px;
+    /* margin-left: 10px; 
+    margin-right: 10px;  */
+  }
+  .divider {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* grid-cols-3 */
+    gap: 0.25rem; /* gap-1 */
+    margin-top: 1rem; /* mt-2 */
+    margin-bottom: 0.5rem; /* mb-2 */
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  
+  .websiteLink {
+    display: flex;
+    margin-top: 10px;
+    gap: 5px;
+    color: var(--color-text-link);
+    cursor: pointer;
+  }
+  .post {
+    font-size: 14px;
+  }
+  
+  /* Адаптивность для экранов от 1200px до 992px */
+  @media (max-width: 1200px) {
+    .userProfile {
+      padding: 30px 20px;
+      gap: 60px;
+    }
+  
+    .userDetails {
+      width: 400px;
+    }
+  
+    .actionButtons {
+      gap: 15px;
+    }
+  
+    .stats {
+      font-size: 15px;
+    }
+  
+    .avatarWrapper {
+      min-width: 140px;
+      height: 140px;
+    }
+  
+    .avatarInner img {
+      width: 130px;
+      height: 130px;
+    }
+  
+    .bio {
+      width: 100%;
+    }
+  
+    .webLink {
+      font-size: 13px;
+    }
+  }
+  
+  /* Адаптивность для экранов от 992px до 768px */
+  @media (max-width: 992px) {
+    .userProfile {
+      flex-direction: column;
+      align-items: start;
+      gap: 30px;
+    }
+  
+    .userDetails {
+      width: 100%;
+      text-align: center;
+    }
+  
+    .actionButtons {
+      gap: 40px;
+      margin: 0 auto;
+    }
+  
+    .stats {
+      font-size: 14px;
+      justify-content: center;
+      gap:10px;
+   
+    }
+  
+    .avatarWrapper {
+      margin: 0 auto;
+      min-width: 120px;
+      height: 120px;
+    }
+  
+    .avatarInner img {
+      width: 110px;
+      height: 110px;
+    }
+  
+    .webLink {
+      font-size: 13px;
+      margin: 0 auto;
+    }
+  
+    .bio {
+       /* Уменьшаем ширину био */
+      font-size: 14px; /* Уменьшаем размер шрифта био */
+      margin: 10px auto;
+      width: 60%;
+    }
+  
+  }
+  
+  @media (max-width: 567px){
+  .btn{
+    max-width: 90px;
+    font-size: 12px;
+  }
+  .actionButtons{
+    gap: 10px;
+  }
+  }
