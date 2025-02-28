@@ -1,0 +1,32 @@
+.postList {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 колонки */
+    gap: 4px;
+    padding: 40px;
+    width: 100%;
+    margin: 0 auto; /* Центрирование контейнера */
+  }
+  
+  .postList>img {
+    width: 100%;
+    height: 312px;
+    object-fit: cover;
+    object-position: center;
+  }
+  
+  /* Адаптивность */
+  @media (max-width: 1024px) {
+    .postList {
+        padding: 25px;
+    }
+    .postList>img{
+        height: 200px;
+    }
+  }
+  
+  @media (max-width: 765px) {
+    .postList {
+        padding: 10px;
+    }
+  }
+  
