@@ -1,0 +1,25 @@
+  .input {
+    border: none;
+    outline: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    transition: border-color 0.3s ease;
+    width: 100%;
+  }
+  
+  .icon {
+    margin-right: 8px;
+    color: #888;
+  }
+  
+  .error {
+    border-color: #dc3545;
+  }
+  
+  .errorMessage {
+    color: #dc3545;
+    font-size: 12px;
+    margin-top: 4px;
+  }
+  
