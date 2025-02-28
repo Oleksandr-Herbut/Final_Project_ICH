@@ -1,0 +1,325 @@
+.modalOverlay {
+    position: fixed; /* Фиксированное позиционирование */
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5); /* Затемненный фон */
+    display: flex; /* Центровка модалки */
+    align-items: center;
+    justify-content: center;
+    z-index: 9999; /* Высокий индекс для перекрытия контента */
+  }
+  .modalContent {
+    display: flex;
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+    left: 10%;
+    width: 70vw;
+    height: 65vh;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2); /* Тень для модалки */
+    z-index: 10000; /* Перекрытие остальных элементов */
+  }
+  .leftSide {
+    width: 60%;
+    background-color: #f0f0f0;
+  }
+ .postImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .rightSide {
+    width: 40%;
+    margin: 0 auto;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .link {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+  }
+  .emojiButton {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer; 
+  }
+  
+
+  .emojiList {
+    position: absolute;
+    bottom: 60px;
+    
+    left: 60%; 
+    width: 300px; /* ширина как у правой стороны модалки */
+    height: 150px;
+    display: flex;
+    flex-wrap: wrap; /* разбиваем элементы на строки */
+    justify-content: space-between;
+    align-items: center;
+    background-color: white; /* фон под контейнером */
+    border-radius: 8px; /* слегка скруглённые края */
+    overflow-x: auto; /* добавляем прокрутку, если смайликов слишком много */
+    padding: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+  }
+
+  .userInfo {
+    display: flex;
+    justify-content: start;
+    gap : 10px;
+    align-items: center;
+  }
+
+  .profileImage {
+    width: 35px;
+    height: 35px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+  .user_name {
+    font-size: 16px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+  }
+  .optionsButton {
+    background-color: white;
+    border: none;
+    font-size: 12px;
+    align-items: flex-end;
+    position: absolute;
+    right: 10px;
+    top: 10px; 
+  }
+
+
+  .menu {
+    position: absolute;
+    width: 30%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1500;
+    display: flex;
+    flex-direction: column;
+    padding: 8px 0;
+    width: 400px;
+  }
+
+  .menuItem {
+    padding: 12px 16px;
+    font-size: 16px;
+    color: #333;
+    text-align: center;
+    cursor: pointer;
+    border: none;
+    border-bottom: 0.1px solid #eaeaea;
+    background: none;
+  }
+
+  .confirmBox {
+    position: absolute;
+    top: 3%;
+    left: 30%;
+    color: red;
+    background-color: #ffffff;
+    padding: 20px;
+    border: 1px solid #737373;
+    border-radius: 12px;
+  }
+
+  .confirmButton .cancelButton {
+    background-color: white;
+    border: none;
+    display: flex;
+    gap: 10px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .followButton {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 0.75rem;           /* text-xs */
+    font-weight: 600;             /* font-semibold */
+    color: #0095f6;               /* text-blue */
+  }
+  
+
+  .editBox {
+    position: fixed;
+    top: 0;
+    left: 10%;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    z-index: 10000;
+    gap: 20px;
+  }
+
+  .editCaption {
+    width: auto;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    resize: none;
+  }
+
+  .editButtons {
+    display: flex;
+    gap: 15px;
+  }
+  .preview {
+    width: 350px;
+    height: auto;
+    border-radius: 5px;
+    margin-top: 10px;
+  }
+
+  .saveButton {
+    background-color: #0095f6;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .cancelButton {
+    background-color: #f5f5f5;
+    color: #333;
+    border: 1px solid #ddd;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .actions {
+    display: flex;
+    gap: 15px;
+    font-size: 12px;
+    color: #333;
+    margin-top: 40px;
+    padding: 4px 14px;
+    border-top: 1px solid #DBDBDB;
+  }
+
+  .actions span {
+    padding: 2px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .addComment {
+    max-height: 45px;
+    padding: 10px 0 ;
+    border-top: 1px solid #DBDBDB;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .commentInput {
+    flex: 1;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 14px;
+    outline: none;
+  }
+  
+  .commentInput:focus {
+    border-color: #007aff;
+  }
+
+  .submitButton{
+    background: transparent;
+    background-color: white;
+    color: #0095F6;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  .submitButton:disabled {
+    background-color: transparent;
+    cursor: not-allowed;
+  }
+  .error {
+  margin-top: 10px;
+  color: #ff0000;
+  font-size: 12px;
+} 
+
+
+/* // comment styles */
+.commentContent {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+
+.commentHeader {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    
+}
+
+.commentDate {
+    font-size: 10px;
+    color: #333;
+}
+
+.comment {
+    display: flex;
+    gap: 15px;
+}
+
+.commentAvatar {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.commentActions span {
+    font-size: 12px;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.commentActions .liked {
+    color: red;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.commentActions .unliked {
+    color: rgb(225, 225, 225);
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
