@@ -1,0 +1,164 @@
+.postsContainer {
+  display: flex;             
+  flex-wrap: wrap;           
+  justify-content: center;
+  gap: 1.5rem 2.5rem;        
+  margin: 1.5rem;         
+  padding: 20px;
+  max-width: 900px;
+}
+
+.post {
+  border-bottom: 1px solid var(--color-line);
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  max-width: 350px;
+  transition: all 0.3s ease-in-out;
+}
+
+.post:hover {
+  transform: scale(1.05);
+}
+
+.post:last-child {
+  border-right: auto;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+
+
+.profileImage {
+  width: 1.75rem;               /* w-7: 7 × 0.25rem = 1.75rem */
+  height: 1.75rem;              /* h-7 */
+  object-fit: cover;
+  border-radius: 50%;            
+}
+
+.info {
+  display: flex;
+  gap: 5px;
+  
+}
+
+.username {
+  font-size: 0.75rem;           /* text-xs */
+  font-weight: 600;
+  color: #262626;               /* text-dark */            
+}
+
+.date {
+  font-size: 0.75rem;           /* text-xs */
+  color: #a9a9a9;               /* text-darkgray */
+}
+.followButton {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  font-size: 0.75rem;           /* text-xs */
+  font-weight: 600;             /* font-semibold */
+  color: #0095f6;               /* text-blue */
+}
+
+.postImage {
+  width: 320px;                 
+  height: 320px;                
+  object-fit: cover;            
+  border-radius: 10px;
+  cursor: pointer;              
+}
+
+
+.actions {
+  display: flex;                
+  flex-direction: column;
+  gap: 0.5rem;                  
+  margin-top: 0.375rem;         
+  margin-bottom: 0.625rem;      
+}
+
+.likes {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.actionsIcons {
+  display: flex;                
+  gap: 0.5rem;                  
+  width: 1.5rem;               
+  height: 1.5rem;               
+  cursor: pointer;              
+}
+
+
+.comments {
+  font-size: 12px;
+  color: gray;
+}
+
+.loadMoreTrigger {
+  height: 1px;
+}
+
+.endMessageContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-1%);
+  text-align: center;
+  width: 100%;
+}
+
+.doneImage {
+  margin-bottom: 10px;
+}
+
+.endMessage {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.subMessage {
+  font-size: 12px;
+  color: gray;
+}
+
+/* .textXs {
+  font-size: 12px;
+}
+
+.mb2 {
+  margin-bottom: 10px;
+}
+
+.maxW {
+  max-width: 420px;
+} */
+
+
+.fontSemibold {
+  font-weight: 600;
+  padding-right: 8px; /* equivalent to pr-2 */
+}
+
+.textDarkgray {
+  color: darkgray;
+}
+
+.cursorPointer {
+  cursor: pointer;
+}
