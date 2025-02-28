@@ -1,0 +1,109 @@
+   .searchBar {
+    display: flex;
+    flex-direction: column;
+    /* padding: 24px 0px; */
+}
+  .searchBar_box h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 30px;
+  }
+  
+  .searchBar_box h5 {
+    font-size: 1rem;
+    font-weight: 500;
+    margin-top: 35px;
+  }
+  .searchBar_box_users {
+    display: flex;
+    flex-direction: column;
+  }
+  .searchBar_box_user {
+    display: flex;
+    align-items: center;
+    padding: 8px 0;
+    cursor: pointer;
+    width: fit-content;
+    transition: transform 0.3s ease;
+    min-width: 100%;
+  }
+  .searchBar_box_user img {
+    max-width: 24px;
+    min-width: 24px;
+    height: 24px;
+    border: var(--border);
+    border-radius: 50%;
+    margin-right: 8px;
+    overflow: hidden;
+}
+  .searchBar_box_user:hover{
+    background-color: #f4f4f4;
+    transform: scale(1.1);
+  
+}  
+
+@media (max-width: 1190px) {
+  .searchBar input {
+      width: 240px;
+  }
+}
+@media (max-width: 768px) {
+
+  .searchBar input {
+      margin: 39px 0 25px;
+      font-size: 16px;
+      font-weight: 300;
+      line-height: 18.75px;
+      text-align: left;
+      border-radius: var(--border-radius-s);
+      width: 200px;
+      height: 40px;
+      padding-left: 10px;
+      
+  }
+}
+@media (max-width: 568px) {
+
+  .searchBar input{
+    margin:0;
+    visibility:visible;
+    position:fixed;
+    top:8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 15%;
+    margin-bottom: 5px;
+    width: 70%;
+
+  }
+  .searchBar{
+      margin:0;
+      padding:0;
+  }
+  .searchBar_box_user {
+      visibility: visible;
+      background-color: #f4f4f4;
+      position: fixed;
+      top: 40px;
+      width: 70%;
+      border-bottom-right-radius: 8px;
+      border-bottom-left-radius: 8px;
+      left: 15%;
+      padding-left: 5px;
+      pointer-events: auto;
+      animation: dropdown-appear 0.4s ease-out;
+     
+  }
+}
+
+@keyframes dropdown-appear {
+  from {
+      opacity: 0;
+      transform: translateY(-10px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
